@@ -5,7 +5,7 @@ body {
     background-color: #1f2021;
 }
 :root {
-    --fontNav: 1.1em;
+    --fontNav: 1em;
     --fontTitle: 2em;
     --fontTitle2: 1.25em;
     --colorNav: #ffffff;
@@ -14,14 +14,17 @@ body {
     --colorP: #a8a8a8;
 }
 * {
-    line-height: 1.5em;
+    line-height: 2em;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
 }
+.container-nav {
+    padding: 1.25em 5%;
+}
 .container {
-    padding: 1.25em 20%;
+    padding: 3.5em 15%;
 }
 .container-background {
     display: flex;
@@ -47,12 +50,12 @@ body {
     justify-content: space-between;
     align-items: center;
     color: var(--colorNav);
-    border-bottom: 1px solid var(--colorNav);
+    border-bottom: 1px solid #636364;
     padding: 0.5em 0 1.2em 0;
     font-size: var(--fontNav);
 }
 nav {
-    margin-left: 6em;
+    margin-left: 10em;
 }
 nav a {
     display: inline-flex;
@@ -68,7 +71,7 @@ nav :first-child {
 nav :first-child::after {
     content: "";
     position: absolute;
-    top: calc(100% + 1.4em);
+    top: calc(100% + 1.59em);
     left: -10%;
     width: 3.5em;
     height: 2px;
@@ -80,11 +83,18 @@ header .icons {
     align-items: center;
     width: 2em;
     height: 2em;
+    font-size: 1.3em;
     border-left: 1px solid var(--colorNav);
 }
 header .icons :first-child {
     display: inline-block;
     color: var(--colorNav);
+}
+section {
+    height: 500px;
+}
+.whit {
+    background-color: white;
 }
 
 
