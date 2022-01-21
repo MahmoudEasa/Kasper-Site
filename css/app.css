@@ -5,8 +5,8 @@ body {
     background-color: #1f2021;
 }
 :root {
-    --fontNav: 1em;
-    --fontTitle: 2em;
+    --fontNav: 0.95em;
+    --fontTitle: 1.7em;
     --fontTitle2: 1.25em;
     --colorNav: #ffffff;
     --colorTitle: #1f2021;
@@ -42,6 +42,10 @@ body {
     height: 100vh;
     margin: 0 0.625em;
 }
+/* Background Whit For Sections */
+.whit {
+    background-color: white;
+}
 /* End Global Variables */
 
 /* Start Header */
@@ -53,6 +57,7 @@ body {
     border-bottom: 1px solid #636364;
     padding: 0.5em 0 1.2em 0;
     font-size: var(--fontNav);
+    text-transform: uppercase;
 }
 nav {
     margin-left: 10em;
@@ -63,6 +68,11 @@ nav a {
     font-size: var(--fontNav);
     text-decoration: none;
     margin: 0 1em;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
 }
 nav :first-child {
     position: relative;
@@ -71,9 +81,29 @@ nav :first-child {
 nav :first-child::after {
     content: "";
     position: absolute;
-    top: calc(100% + 1.59em);
+    top: calc(100% + 1.70em);
     left: -10%;
     width: 3.5em;
+    height: 2px;
+    background-color: var(--colorHome);
+}
+.services:hover,
+.portfolio:hover,
+.about:hover,
+.pricing:hover,
+.contact:hover {
+    position: relative;
+    color: var(--colorHome);
+}
+.services:hover::after,
+.portfolio:hover::after,
+.about:hover::after,
+.pricing:hover::after,
+.contact:hover:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 1.70em);
+    width: 100%;
     height: 2px;
     background-color: var(--colorHome);
 }
@@ -90,13 +120,76 @@ header .icons :first-child {
     display: inline-block;
     color: var(--colorNav);
 }
-section {
-    height: 500px;
-}
-.whit {
-    background-color: white;
-}
+/* End Header */
 
+/* Start Main1 */
+.main1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: calc(100vh - 5em);
+    width: 100%;
+}
+.container-main1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--colorNav);
+    letter-spacing: 1px;
+    padding: 0 1em 0;
+}
+.main1 .container-bg {
+    position: absolute;
+    left: 0;
+    top: -2em;
+    z-index: -1;
+    background-color: var(--colorHome);
+    opacity: 50%;
+    width: 70%;
+    height: calc(100% + 4em);
+}
+.container-main1 h1 {
+    margin-right: 3em;
+    margin-left: 5.5em;
+    font-size: var(--fontTitle);
+    line-height: 1.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.container-main1 h1 span {
+    display: inline-block;
+    letter-spacing: normal;
+    line-height: 1.8em;
+    font-size: 0.5em;
+    margin-top: 0.5em;
+    opacity: 80%;
+    max-width: 70%;
+    text-transform: none;
+    text-align: justify;
+}
+.pages-main1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    right: 50%;
+    font-size: 0.8em;
+}
+.pages-main1 .page1,
+.pages-main1 .page3 {
+    color: var(--colorNav);
+}
+.pages-main1 .page2 {
+    color: var(--colorHome);
+}
+/* End Main1 */
 
+/* Start Services */
+
+/* End Services */
 
 
